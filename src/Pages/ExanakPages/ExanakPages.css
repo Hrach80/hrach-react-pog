@@ -1,0 +1,301 @@
+/* -------------------- Ընդհանուր ոճեր -------------------- */
+body {
+    background-color: #292929;
+    font-family: Arial, sans-serif;
+    color: #c9c9c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Հիմնական կոնտեյները՝ ֆիքսված չափսերով */
+.weather-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 1400px;
+    height: 650px;
+    padding: 30px;
+    box-shadow:
+        15px 15px 30px #1a1a1a,
+        -15px -15px 30px #383838;
+    background-color: #292929;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+/* -------------------- Նեումորֆիկ ոճեր -------------------- */
+.weather-box,
+.forecast-box {
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #292929;
+    box-shadow:
+        10px 10px 20px #1a1a1a,
+        -10px -10px 20px #383838;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* -------------------- Պատկերակների գույներ -------------------- */
+.weather-icon {
+    font-size: 10em;
+    transition: color 0.3s ease;
+}
+
+.weather-icon.sunny {
+    color: #FFC107;
+}
+
+.weather-icon.cloudy {
+    color: #99A3A4;
+}
+
+.weather-icon.rain {
+    color: #2196F3;
+}
+
+.weather-icon.thunderstorm {
+    color: #673AB7;
+}
+
+.weather-icon.snow {
+    color: #E0F7FA;
+}
+
+.weather-icon.fog {
+    color: #BDBDBD;
+}
+
+/* -------------------- Տարրերի ոճեր -------------------- */
+.weather-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weather-header h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.weather-info .temperature {
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.weather-info .description {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    margin: 5px 0 20px 0;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.detail-item {
+    padding: 10px;
+    text-align: center;
+}
+
+.detail-item p {
+    font-size: 0.9em;
+    margin: 0;
+    color: #999;
+}
+
+.detail-item span {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* -------------------- Կանխատեսման ցուցակ -------------------- */
+.forecast-box {
+    overflow-y: auto;
+}
+
+.forecast-box h3 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.forecast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.forecast-item {
+    background-color: #292929;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow:
+        5px 5px 10px #1a1a1a,
+        -5px -5px 10px #383838;
+}
+
+.forecast-item p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.forecast-item .weather-icon {
+    font-size: 3em;
+    margin: 0;
+}
+
+.forecast-item .temp {
+    font-weight: bold;
+}
+/* Քաղաքի ընտրության բաժնի ոճեր */
+.city-selector {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-selector select {
+    
+    padding: 20px 40px;
+    border-radius: 15px;
+    background-color: #292929;
+    color: #c9c9c9;
+    border: none;
+    box-shadow:
+        5px 5px 10px #1a1a1a,
+        -5px -5px 10px #383838;
+    font-size: 1em;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    /* Հեռացնում է ստանդարտ select սլաքը */
+}
+
+.city-selector select option {
+    background-color: #292929;
+    color: #c9c9c9;
+}
+/* -------------------- Քաղաքի նկարի ոճեր -------------------- */
+.city-image {
+    width: 600px;
+    /* Կարող եք փոփոխել չափսը */
+    height: auto;
+    border-radius: 15px;
+    /* Կլորացված անկյուններ */
+    box-shadow:
+        5px 5px 10px #1a1a1a,
+        -5px -5px 10px #383838;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* -------------------- Ռեսպոնզիվություն -------------------- */
+/* -------------------- Ռեսպոնզիվություն -------------------- */
+
+/* Պլանշետների և փոքր էկրանների համար (մինչև 1400px) */
+@media (max-width: 1400px) {
+    .weather-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 650px;
+        padding: 20px;
+        height: auto;
+        gap: 20px;
+    }
+
+    .weather-box,
+    .forecast-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .weather-info .temperature {
+        font-size: 3em;
+    }
+
+    .weather-info .description {
+        font-size: 1em;
+    }
+
+    .weather-icon {
+        font-size: 8em;
+    }
+
+    .forecast-list {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .city-image {
+        width: 100%;
+        max-width: 400px;
+        /* Կարգավորում է նկարի չափսը պլանշետի համար */
+    }
+}
+
+/* Հեռախոսների համար (մինչև 480px) */
+@media (max-width: 480px) {
+    .weather-container {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .weather-box {
+        padding: 20px;
+    }
+
+    .weather-header h1 {
+        font-size: 1.5em;
+    }
+
+    .weather-icon {
+        font-size: 6em;
+    }
+
+    .weather-info .temperature {
+        font-size: 2.5em;
+    }
+
+    .forecast-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .forecast-item {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .forecast-item .weather-icon {
+        font-size: 2.5em;
+    }
+}
