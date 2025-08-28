@@ -170,6 +170,7 @@ body {
 .forecast-item .temp {
     font-weight: bold;
 }
+
 /* Քաղաքի ընտրության բաժնի ոճեր */
 .city-selector {
     margin-bottom: 20px;
@@ -182,8 +183,8 @@ body {
 }
 
 .city-selector select {
-    
-    padding: 20px 40px;
+
+    padding: 15px 40px;
     border-radius: 15px;
     background-color: #292929;
     color: #c9c9c9;
@@ -195,20 +196,19 @@ body {
     cursor: pointer;
     outline: none;
     appearance: none;
-    /* Հեռացնում է ստանդարտ select սլաքը */
+    text-align: center;
 }
 
 .city-selector select option {
     background-color: #292929;
     color: #c9c9c9;
 }
+
 /* -------------------- Քաղաքի նկարի ոճեր -------------------- */
 .city-image {
     width: 600px;
-    /* Կարող եք փոփոխել չափսը */
     height: auto;
     border-radius: 15px;
-    /* Կլորացված անկյուններ */
     box-shadow:
         5px 5px 10px #1a1a1a,
         -5px -5px 10px #383838;
@@ -217,9 +217,6 @@ body {
 }
 
 /* -------------------- Ռեսպոնզիվություն -------------------- */
-/* -------------------- Ռեսպոնզիվություն -------------------- */
-
-/* Պլանշետների և փոքր էկրանների համար (մինչև 1400px) */
 @media (max-width: 1400px) {
     .weather-container {
         flex-direction: column;
@@ -252,12 +249,12 @@ body {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
+
     }
 
     .city-image {
         width: 100%;
         max-width: 400px;
-        /* Կարգավորում է նկարի չափսը պլանշետի համար */
     }
 }
 
