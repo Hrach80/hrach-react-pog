@@ -264,13 +264,13 @@ body {
         gap: 20px;
         padding: 15px;
     }
-
+    
     .weather-box {
         padding: 20px;
     }
 
     .weather-header h1 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .weather-icon {
@@ -289,7 +289,10 @@ body {
     .forecast-item {
         flex-direction: row;
         justify-content: space-between;
-        padding: 10px 15px;
+        padding: 10px 45px;
+        gap: 5px;
+        
+        
     }
 
     .forecast-item .weather-icon {
